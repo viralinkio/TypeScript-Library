@@ -5,6 +5,7 @@ let rpcReqId = 0;
 
 export default class ViraLink {
   client: MqttClient;
+  version = "0.1.3";
 
   constructor(token: string) {
     this.client = mqtt.connect('mqtt://console.viralink.io', {
@@ -40,17 +41,17 @@ export default class ViraLink {
                 }
             }*/
     });
-  }
+  };
 
   public sendTelemetry(payload: string) {
     this.client.publish('v1/devices/me/telemetry', payload);
-  }
+  };
 
   public sendAttributes(payload: string) {
     this.client.publish('v1/devices/me/attributes', payload);
-  }
+  };
 
   public sendRPC(payload: string) {
     this.client.publish('v1/devices/me/rpc/request/' + rpcReqId++, payload);
-  }
+  };
 }

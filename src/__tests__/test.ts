@@ -1,6 +1,6 @@
-import { ViraLink } from '../main';
+import ViraLink from '../main';
 test('My mock', () => {
-  let vl = new ViraLink('esp-rfid');
+  // let vl = new ViraLink('esp-rfid');
 
   expect( 'Hello Carl').toBe('Hello Carl');
 });
