@@ -42,15 +42,15 @@ export class ViraLink {
     });
   }
 
-  sendTelemetry(payload: string) {
+  public sendTelemetry(payload: string) {
     this.client.publish('v1/devices/me/telemetry', payload);
   }
 
-  sendAttributes(payload: string) {
+  public sendAttributes(payload: string) {
     this.client.publish('v1/devices/me/attributes', payload);
   }
 
-  sendRPC(payload: string) {
+  public sendRPC(payload: string) {
     this.client.publish('v1/devices/me/rpc/request/' + rpcReqId++, payload);
   }
 }
