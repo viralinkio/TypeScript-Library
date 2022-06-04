@@ -1,0 +1,26 @@
+{
+  "name": "viralink",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/main.js",
+  "scripts": {
+    "start": "npm run ts-example",
+    "ts-example": "tsc && node lib/main.js",
+    "js-example": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mqtt": "^4.3.7"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.35",
+    "@types/ws": "^8.5.3",
+
+    "typescript": "^4.6.4"
+  },
+  "type": "module"
+
+
+}
