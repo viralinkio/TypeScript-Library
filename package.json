@@ -1,26 +1,38 @@
 {
   "name": "viralink",
   "version": "1.0.0",
-  "description": "",
+  "description": "ViraLink Typescript Mqtt Client",
   "main": "lib/main.js",
   "scripts": {
-    "start": "npm run ts-example",
-    "ts-example": "tsc && node lib/main.js",
-    "js-example": "node main.js"
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write 'src/**/*.ts' 'src/**/*.js'",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [],
-  "author": "",
+  "author": "ViraLink",
   "license": "ISC",
   "dependencies": {
     "mqtt": "^4.3.7"
   },
   "devDependencies": {
+    "@types/jest": "^28.1.0",
     "@types/node": "^17.0.35",
     "@types/ws": "^8.5.3",
-
+    "jest": "^28.1.0",
+    "prettier": "^2.6.2",
+    "ts-jest": "^28.0.4",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.6.4"
   },
-  "type": "module"
-
-
+  "type": "module",
+  "files": [
+    "lib/**/*"
+  ]
 }
