@@ -6,9 +6,9 @@ let rpcReqId = 0;
 export class ViraLink {
   client: MqttClient;
 
-  constructor() {
+  constructor(token: string) {
     this.client = mqtt.connect('mqtt://console.viralink.io', {
-      username: 'kpC9YYIm2lvmxgfoQwsx',
+      username: token
     });
 
     this.client.on('connect', () => {
