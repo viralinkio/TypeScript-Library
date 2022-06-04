@@ -3,7 +3,7 @@ import { MqttClient } from 'mqtt';
 
 let rpcReqId = 0;
 
-export class ViraLink {
+export default class ViraLink {
   client: MqttClient;
 
   constructor(token: string) {

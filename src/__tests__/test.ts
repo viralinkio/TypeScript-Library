@@ -1,4 +1,6 @@
 import { ViraLink } from '../main';
 test('My mock', () => {
-  expect('Hello Carl').toBe('Hello Carl');
+  let vl = new ViraLink('esp-rfid');
+
+  expect( 'Hello Carl').toBe('Hello Carl');
 });
