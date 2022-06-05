@@ -1,6 +1,6 @@
 {
   "name": "viralink-mqtt",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "ViraLink Typescript Mqtt Client",
   "main": "lib/main.js",
   "scripts": {

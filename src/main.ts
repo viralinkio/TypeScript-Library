@@ -1,5 +1,5 @@
-import * as mqtt from 'mqtt';
-import { MqttClient } from 'mqtt';
+import { MqttClient } from "mqtt";
+const mqtt = require('mqtt');
 
 let rpcReqId = 0;
 
@@ -43,7 +43,7 @@ export default class ViraLink {
     });
   };
 
-  public sendTelemetry(payload: string) {
+  public sendTelemetry(payload: string): void {
     this.client.publish('v1/devices/me/telemetry', payload);
   };
 
