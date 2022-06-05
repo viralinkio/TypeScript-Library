@@ -1,9 +1,9 @@
-import { MqttClient, connect } from "mqtt";
+import {Client,connect} from "mqtt";
 
 let rpcReqId = 0;
 
 export default class ViraLink {
-  client: MqttClient;
+  client: Client;
 
   constructor(token: string) {
     this.client = connect('mqtt://console.viralink.io', {
